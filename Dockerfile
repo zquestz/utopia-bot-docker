@@ -1,8 +1,8 @@
-FROM ubuntu:xenial
+FROM ubuntu:focal
 LABEL maintainer="quest <quest@mac.com>"
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get upgrade -y && apt-get install -y wget
+RUN apt-get update && apt-get upgrade -y && apt-get install -y wget libxcb-xinput0
 
 RUN mkdir build
 WORKDIR build
